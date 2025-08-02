@@ -105,7 +105,7 @@ const runMigrations = async (): Promise<void> => {
     }
 
     await createTables();
-    await seedDefaultData();
+    await seedDefaultDataNew();
 
     console.log("Migrations completed successfully!");
     process.exit(0);
@@ -269,4 +269,4 @@ const seedDefaultDataNew = async (): Promise<void> => {
   }
 };
 
-seedDefaultDataNew();
+runMigrations();
